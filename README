@@ -1,0 +1,8 @@
+This project was made for Kriti'2016, the Technical Inter-hostel competition.
+
+File send/receive communication based on 2.4GHz band, using nRFL2401 sensor interfaced with Arduino.
+Using libraries RF24, RF24Network for Arduino and pyserial for python.
+
+I am currently trying to optimize and develop this more (by increasing speed, range).
+
+The contributors and mentors include Rahul kumar, Shantam Raj, Saumitra Sharma and Chandan Gangwar.
