@@ -38,7 +38,7 @@ void setup()
   mySerial.begin(115200);
 
   radio.begin();
-  network.begin(110,this_node);
+  network.begin(120,this_node);
   Serial.read();
   
 }
