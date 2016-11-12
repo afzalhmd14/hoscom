@@ -38,9 +38,8 @@ void setup()
   mySerial.begin(115200);
 
   radio.begin();
-  network.begin(120,this_node);
+  network.begin(100,this_node);
   Serial.read();
-  
 }
 
 bool success=0;
@@ -51,10 +50,7 @@ void loop()
   network.update();
   if(Serial.available())
   {
-    
-   // payload.lol=27;
     payload.packet=Serial.read();
-    //mySerial.write(payload.packet);
     success=network.write(header,&payload,sizeof(payload));
     if(omg==0)
     {
@@ -70,7 +66,7 @@ void loop()
     if(!success)
     {
       while(!success)
-        network.write(header,&payload,sizeof(payload));
+        success=network.write(header,&payload,sizeof(payload));
       //Serial.println("Packet sent successfully ");
     }
   }

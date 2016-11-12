@@ -26,7 +26,7 @@ char a=' ';
 void setup()
 {
   radio.begin();
-  network.begin(120,this_node);
+  network.begin(100,this_node);
   Serial.begin(115200);
   SPI.begin();
   //Serial.print(a);
